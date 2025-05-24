@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
 const bcrypt = require('bcryptjs');
+require('dotenv').config();
 const jwt = require('jsonwebtoken');
 
 // POST /auth/register
@@ -37,12 +38,12 @@ router.post('/login', async (req, res) => {
 
     const payload = { id: user._id, email: user.email };
     console.log(`Auth payload: ${JSON.stringify(payload)} - secret ${process.env.JWT_SECRET}`);
-    // const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' });
-    // console.log(`Auth token: ${JSON.stringify(token)}`);
+    const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' });
+    console.log(`Auth token: ${JSON.stringify(token)}`);
 
-    res.json({ message : payload });
+    res.json({ token : token });
   } catch (error) {
-    console.log(`Auth error: ${JSON.stringify(error)}`);
+    console.log(`Auth error:`,error);
     
     res.status(500).json({ message: error });
   }
