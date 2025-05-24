@@ -25,6 +25,8 @@ mongoose.connect(mongoURI, {
 
 // Routes
 app.use('/auth', authRoutes);
+app.use('/apis', products);
+
 
 // Route test mặc định
 app.get('/', (req, res) => {

@@ -5,6 +5,13 @@ __metadata:
   version: 6
   cacheKey: 8
 
+"@faker-js/faker@npm:^9.8.0":
+  version: 9.8.0
+  resolution: "@faker-js/faker@npm:9.8.0"
+  checksum: c5d44043205ad6a05eda294adb08470eed8a5e26f68ae91df6ad10848ed2cbe7dfeadf197452e39fadda06475a0e457e2a44b41b494a42d465b7533179fd121a
+  languageName: node
+  linkType: hard
+
 "@isaacs/cliui@npm:^8.0.2":
   version: 8.0.2
   resolution: "@isaacs/cliui@npm:8.0.2"
@@ -150,12 +157,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "appbikebackend@workspace:."
   dependencies:
+    "@faker-js/faker": ^9.8.0
     bcryptjs: ^3.0.2
     cors: ^2.8.5
     dotenv: ^16.5.0
     express: ^5.1.0
     jsonwebtoken: ^9.0.2
-    mongoose: ^8.14.3
+    mongoose: ^8.15.0
     nodemon: ^3.1.10
   languageName: unknown
   linkType: soft
@@ -1235,9 +1243,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mongoose@npm:^8.14.3":
-  version: 8.14.3
-  resolution: "mongoose@npm:8.14.3"
+"mongoose@npm:^8.15.0":
+  version: 8.15.0
+  resolution: "mongoose@npm:8.15.0"
   dependencies:
     bson: ^6.10.3
     kareem: 2.6.3
@@ -1246,7 +1254,7 @@ __metadata:
     mquery: 5.0.0
     ms: 2.1.3
     sift: 17.1.3
-  checksum: f87d3083af7c886d3d3ba278ff34a9263eef6f0594169096858aca6590a9583463818ec33131b717ff7e7e63d16e0f88adcffa2093f3a7f462cce426efbbf3c8
+  checksum: 4cc5274aef1ad2fe8210b5a164608872ce49da4349fdd977c30f1f2b9b0c6ffd5981adaa3e836fc4c7ede8be63b13306772da6a4c9ff21f788885361549aff4a
   languageName: node
   linkType: hard
 
